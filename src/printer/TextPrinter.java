@@ -64,32 +64,48 @@ public class TextPrinter implements Worker {
 		Unit unit = Unit.DEGREE;
 
 		switch (c) {
-		case 'A':
-			return new Alphabet.A(position, width, height, unit);
-		case 'B':
-			return new Alphabet.B(position, height, unit);
-		case 'C':
-			return new Alphabet.C(position, width, unit);
-		case 'D':
-			return new Alphabet.D(position, height, unit);
-		case 'E':
-			return new Alphabet.E(position, width, height, unit);
-		case 'F':
-			return new Alphabet.F(position, width, height, unit);
-		case 'G':
-			return new Alphabet.G(position, width, unit);
-		case 'H':
-			return new Alphabet.H(position, width, height, unit);
-		case 'I':
-			return new Alphabet.I(position, height, unit);
-		case 'J':
-			return new Alphabet.J(position, width, height, unit);
-		case 'K':
-			return new Alphabet.K(position, width, height, unit);
-		case 'N':
-			return new Alphabet.N(position, width, height, unit);
-		default:
-			return new AdvancedPrintSequence();
+			case 'A':
+				return new Alphabet.A(position, width, height, unit);
+			case 'B':
+				return new Alphabet.B(position, height, unit);
+			case 'C':
+				return new Alphabet.C(position, height / 2, unit);
+			case 'D':
+				return new Alphabet.D(position, height, unit);
+			case 'E':
+				return new Alphabet.E(position, width, height, unit);
+			case 'F':
+				return new Alphabet.F(position, width, height, unit);
+			case 'G':
+				return new Alphabet.G(position, height / 2, unit);
+			case 'H':
+				return new Alphabet.H(position, width, height, unit);
+			case 'I':
+				return new Alphabet.I(position, width, height, unit);
+			case 'J':
+				return new Alphabet.J(position, width, height, unit);
+			case 'K':
+				return new Alphabet.K(position, width, height, unit);
+			case 'L':
+				return new Alphabet.L(position, width, height, unit);
+			case 'M':
+				return new Alphabet.M(position, width, height, unit);
+			case 'N':
+				return new Alphabet.N(position, width, height, unit);
+			case 'O':
+				return new Alphabet.O(position, width / 2, unit);
+			case 'P':
+				return new Alphabet.P(position, height, unit);
+			case 'Q':
+				return new Alphabet.Q(position, width / 2, unit);
+			case 'R':
+				return new Alphabet.R(position, height, unit);
+			case 'S':
+				return new Alphabet.S(position, height, unit);
+			case 'T':
+				return new Alphabet.T(position, width, height, unit);
+			default:
+				return new AdvancedPrintSequence();
 		}
 	}
 
