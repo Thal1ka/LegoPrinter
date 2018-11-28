@@ -34,6 +34,10 @@ public class Function extends Printable {
 		return new Coordinate(endX, y, unit);
 	}
 
+	public float getYFor(float x) {
+		return valueProvider.getFunctionValue(x);
+	}
+
 	@Override
 	public List<Vector> getVectors() {
 

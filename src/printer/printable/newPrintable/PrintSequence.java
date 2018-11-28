@@ -42,4 +42,8 @@ public class PrintSequence {
 	public void setStartCoordinate(Coordinate startCoordinate) {
 		this.startCoordinate = startCoordinate;
 	}
+
+	public List<DrawVector> getVectors() {
+		return vectors;
+	}
 }

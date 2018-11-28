@@ -10,6 +10,7 @@ import printer.printable.Coordinate;
 import printer.printable.Line;
 import printer.printable.PrintSequence;
 import printer.printable.Printable;
+import printer.printable.newPrintable.DrawVector;
 
 public class PrintController implements Worker {
 
@@ -77,6 +78,21 @@ public class PrintController implements Worker {
 		headUp();
 	}
 
+	public void print(printer.printable.newPrintable.PrintSequence printSequence) {
+
+		for (DrawVector vector : printSequence.getVectors()) {
+			if (vector.isPrinted) {
+				headDown();
+			} else {
+				headUp();
+			}
+
+			move(vector.dx, vector.dy);
+		}
+
+		headUp();
+	}
+
 	public void printLine(Coordinate start, Coordinate stop) {
 
 		if (!(isPointValid(start.x, start.y) && isPointValid(stop.x, stop.y))) throw new IllegalArgumentException();
@@ -91,9 +107,7 @@ public class PrintController implements Worker {
 
 	}
 
-	private void moveTo(Coordinate target) {
-		float dx = target.x - currentX;
-		float dy = target.y - currentY;
+	public void move(float dx, float dy) {
 
 		if (dx == 0 && dy == 0) return;
 
@@ -105,8 +119,15 @@ public class PrintController implements Worker {
 			moveOrthagonal(dx, dy);
 		}
 
-		currentX = target.x;
-		currentY = target.y;
+		currentX += dx;
+		currentY += dy;
+	}
+
+	private void moveTo(Coordinate target) {
+		float dx = target.x - currentX;
+		float dy = target.y - currentY;
+
+		move(dx, dy);
 	}
 
 	private void moveHorizontal(float dx) {
