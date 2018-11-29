@@ -1,4 +1,4 @@
-package printer.printable;
+package printer.old_printable;
 
 public abstract class Printable {
 	public final Coordinate start;

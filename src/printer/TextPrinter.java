@@ -1,9 +1,9 @@
 package printer;
 
 import printer.hardware.Worker;
-import printer.printable.AdvancedPrintSequence;
-import printer.printable.Coordinate;
-import printer.printable.Unit;
+import printer.old_printable.AdvancedPrintSequence;
+import printer.old_printable.Coordinate;
+import printer.print.Unit;
 import printer.printable.figure.Alphabet;
 
 public class TextPrinter implements Worker {

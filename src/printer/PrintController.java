@@ -5,12 +5,12 @@ import printer.hardware.PaperController;
 import printer.hardware.PrintHead;
 import printer.hardware.Worker;
 import printer.hardware.motors.Motors;
-import printer.printable.AdvancedPrintSequence;
-import printer.printable.Coordinate;
-import printer.printable.Line;
-import printer.printable.PrintSequence;
-import printer.printable.Printable;
-import printer.printable.newPrintable.DrawVector;
+import printer.old_printable.AdvancedPrintSequence;
+import printer.old_printable.Coordinate;
+import printer.old_printable.Line;
+import printer.old_printable.PrintSequence;
+import printer.old_printable.Printable;
+import printer.print.DrawVector;
 
 public class PrintController implements Worker {
 

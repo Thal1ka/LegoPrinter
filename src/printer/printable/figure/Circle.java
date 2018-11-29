@@ -1,9 +1,9 @@
 package printer.printable.figure;
 
-import printer.printable.AdvancedPrintSequence;
-import printer.printable.Coordinate;
-import printer.printable.Curve;
-import printer.printable.Unit;
+import printer.old_printable.AdvancedPrintSequence;
+import printer.old_printable.Coordinate;
+import printer.old_printable.Curve;
+import printer.print.Unit;
 
 public class Circle extends AdvancedPrintSequence {
 

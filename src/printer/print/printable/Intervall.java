@@ -1,4 +1,4 @@
-package printer.printable.newPrintable;
+package printer.print.printable;
 
 public class Intervall<T> {
 

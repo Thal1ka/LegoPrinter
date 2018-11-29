@@ -1,10 +1,11 @@
-package printer.printable.newPrintable;
+package printer.print.printable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import printer.printable.Coordinate;
-import printer.printable.Unit;
+import printer.old_printable.Coordinate;
+import printer.print.Unit;
+import printer.print.Vector;
 
 public class Function extends Printable {
 

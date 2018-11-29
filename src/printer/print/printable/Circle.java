@@ -1,11 +1,12 @@
-package printer.printable.newPrintable;
+package printer.print.printable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import printer.printable.Coordinate;
-import printer.printable.Unit;
-import printer.printable.newPrintable.Function.FunctionValueProvider;
+import printer.old_printable.Coordinate;
+import printer.print.Unit;
+import printer.print.Vector;
+import printer.print.printable.Function.FunctionValueProvider;
 
 public class Circle extends Printable {
 

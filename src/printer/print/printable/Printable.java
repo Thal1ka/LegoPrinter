@@ -1,8 +1,9 @@
-package printer.printable.newPrintable;
+package printer.print.printable;
 
 import java.util.List;
 
-import printer.printable.Coordinate;
+import printer.old_printable.Coordinate;
+import printer.print.Vector;
 
 public abstract class Printable {
 
@@ -11,4 +12,8 @@ public abstract class Printable {
 	public abstract Coordinate getEndCoordinate();
 
 	public abstract List<Vector> getVectors();
+
+	public Coordinate getPositioningCoordinate() {
+		return getStartCoordinate();
+	}
 }

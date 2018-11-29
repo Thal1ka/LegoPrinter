@@ -1,7 +1,7 @@
 package printer.printable.figure;
 
-import printer.printable.Coordinate;
-import printer.printable.PrintSequence;
+import printer.old_printable.Coordinate;
+import printer.old_printable.PrintSequence;
 
 public class HausVomNikolaus extends PrintSequence {
 

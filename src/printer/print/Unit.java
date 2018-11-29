@@ -1,4 +1,4 @@
-package printer.printable;
+package printer.print;
 
 import printer.hardware.motors.Motors;
 

@@ -13,10 +13,6 @@ import printer.hardware.motors.AdvancedMotor;
 import printer.hardware.motors.Motors;
 import printer.hardware.sensors.CheckedSensor;
 import printer.hardware.sensors.SensorListener;
-import printer.printable.Coordinate;
-import printer.printable.Unit;
-import printer.printable.newPrintable.Line;
-import printer.printable.newPrintable.PrintBluePrint;
 
 public class Printer implements Worker {
 
@@ -77,10 +73,6 @@ public class Printer implements Worker {
 		// tp.setFontSize(15, Unit.PERCENT);
 		// tp.setMargin(4, Unit.PERCENT);
 		// tp.printString("Banane\nGanga");
-
-		PrintBluePrint bluePrint = new PrintBluePrint();
-		bluePrint.add(new Line(new Coordinate(50, 30, Unit.METRIC), new Coordinate(80, 40, Unit.METRIC)));
-		pc.print(bluePrint.getPrintSequence());
 
 		PaperController.instance.ejectPaper();
 	}
