@@ -32,6 +32,22 @@ public class Vector {
 		return this;
 	}
 
+	/**
+	 *
+	 * Multiplies the vector with the given matrix
+	 * <code><br/><br/>aa ab <br/> ba bb</code>
+	 */
+	public Vector mult(float aa, float ab, float ba, float bb) {
+
+		float multDx = aa * dx + ab * dy;
+		float multDy = ba * dx + bb * dy;
+
+		this.dx = multDx;
+		this.dy = multDy;
+
+		return this;
+	}
+
 	public Vector copy() {
 		return new Vector(dx, dy, Unit.DEGREE);
 	}

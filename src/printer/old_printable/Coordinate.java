@@ -54,6 +54,10 @@ public class Coordinate {
 		return new Vector(dx, dy, Unit.DEGREE);
 	}
 
+	public Vector toVector() {
+		return new Vector(x, y, Unit.DEGREE);
+	}
+
 	public Coordinate addVector(Vector vector) {
 
 		float x = this.x + vector.getDx();

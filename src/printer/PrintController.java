@@ -10,7 +10,6 @@ import printer.old_printable.Coordinate;
 import printer.old_printable.Line;
 import printer.old_printable.PrintSequence;
 import printer.old_printable.Printable;
-import printer.print.DrawVector;
 
 public class PrintController implements Worker {
 
@@ -73,21 +72,6 @@ public class PrintController implements Worker {
 			headDown();
 			moveTo(printable.end);
 			last = printable.end;
-		}
-
-		headUp();
-	}
-
-	public void print(printer.printable.newPrintable.PrintSequence printSequence) {
-
-		for (DrawVector vector : printSequence.getVectors()) {
-			if (vector.isPrinted) {
-				headDown();
-			} else {
-				headUp();
-			}
-
-			move(vector.dx, vector.dy);
 		}
 
 		headUp();
