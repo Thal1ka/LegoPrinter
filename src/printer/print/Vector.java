@@ -65,4 +65,9 @@ public class Vector {
 		float dy = vector2.dy - vector2.dy;
 		return new Vector(dx, dy, Unit.DEGREE);
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Vector(%s, %s", dx, dy);
+	}
 }

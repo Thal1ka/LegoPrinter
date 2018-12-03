@@ -13,6 +13,11 @@ import printer.hardware.motors.AdvancedMotor;
 import printer.hardware.motors.Motors;
 import printer.hardware.sensors.CheckedSensor;
 import printer.hardware.sensors.SensorListener;
+import printer.old_printable.Coordinate;
+import printer.print.PrintConnector;
+import printer.print.Unit;
+import printer.print.Vector;
+import printer.print.printable.Line;
 
 public class Printer implements Worker {
 
@@ -73,6 +78,25 @@ public class Printer implements Worker {
 		// tp.setFontSize(15, Unit.PERCENT);
 		// tp.setMargin(4, Unit.PERCENT);
 		// tp.printString("Banane\nGanga");
+
+		{
+
+			Line line = new Line(new Coordinate(0, 30), new Coordinate(30, 30, Unit.METRIC));
+
+			PrintConnector connector = new PrintConnector(line);
+			connector.rotate(90);
+			connector.add(line);
+			connector.rotate(135);
+			connector.add(line);
+			connector.rotate(45);
+			connector.setScaling(0.5F);
+			connector.add(line);
+
+			for (Vector v : connector.getVectors()) {
+				System.out.println(v);
+			}
+
+		}
 
 		PaperController.instance.ejectPaper();
 	}

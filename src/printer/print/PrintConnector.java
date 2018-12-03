@@ -51,6 +51,10 @@ public class PrintConnector extends Printable {
 		this.rotationAnkle = ankle;
 	}
 
+	public void setScaling(float scaling) {
+		this.scaling = scaling;
+	}
+
 	@Override
 	public Coordinate getStartCoordinate() {
 		return startCoordinate;
